@@ -1,0 +1,68 @@
+{
+  "plugins": {
+    "artio.nvim": {
+      "rev": "0b08d6862afe685fd78963808d022d7c15c89546",
+      "src": "https://codeberg.org/comfysage/artio.nvim"
+    },
+    "blink.cmp": {
+      "rev": "3db7326f54b73df4789e0fd6274bedda33975fea",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
+      "src": "https://github.com/saghen/blink.lib"
+    },
+    "cairn.nvim": {
+      "rev": "2f37a2ef66a8f8a18618cf625028a8e0b9df8f14",
+      "src": "https://github.com/GooseRooster/cairn.nvim"
+    },
+    "carvion": {
+      "rev": "a5a120d535b83fec5b08efab2557effbc2f34602",
+      "src": "https://github.com/zitrocode/carvion.nvim"
+    },
+    "evergarden": {
+      "rev": "6a47a90e5caf1b21e54ff7967017c255bab80fdd",
+      "src": "https://codeberg.org/evergarden/nvim.git"
+    },
+    "gruber-darker.nvim": {
+      "rev": "aba065c3a79b58cc3863d5c9db319255abd1258a",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
+    "gruvbox-material": {
+      "rev": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79",
+      "src": "https://github.com/sainnhe/gruvbox-material"
+    },
+    "intent.nvim": {
+      "rev": "57f825ad5cd74efcdbce6f57ca40e351786ad6e1",
+      "src": "https://github.com/GasimGasimzada/intent.nvim"
+    },
+    "jellybeans.nvim": {
+      "rev": "29f4c17981f70c0919c2f3f918da9a89f906bf37",
+      "src": "https://github.com/WTFox/jellybeans.nvim"
+    },
+    "kintsugi-nvim": {
+      "rev": "6c8b881e6aea8ee1e3361a00858b5b1a3488d885",
+      "src": "https://github.com/metalelf0/kintsugi-nvim"
+    },
+    "koda.nvim": {
+      "rev": "ac7e746882b31a68bdcd533464a20ca40b712bcb",
+      "src": "https://github.com/oskarnurm/koda.nvim"
+    },
+    "meowsoot.nvim": {
+      "rev": "b0a3d2cbdd54c7119551c8069066f2c731a0eb04",
+      "src": "https://github.com/marekh19/meowsoot.nvim"
+    },
+    "mini.icons": {
+      "rev": "520995f1d75da0e4cc901ee95080b1ff2bc46b94",
+      "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "nvim-web-devicons": {
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "themery.nvim": {
+      "rev": "bfa58f4b279d21cb515b28023e1b68ec908584b2",
+      "src": "https://github.com/zaldih/themery.nvim"
+    }
+  }
+}

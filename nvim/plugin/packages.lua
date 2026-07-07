@@ -1,0 +1,16 @@
+vim.pack.add({
+	{ src = "https://github.com/saghen/blink.lib" },
+	{ src = "https://github.com/saghen/blink.cmp", branch = "main" },
+	{ src = "https://github.com/arborist-ts/arborist.nvim" },
+	{ src = "https://github.com/juniorsundar/refer.nvim" },
+	{ src = "https://github.com/nvim-mini/mini.ai" },
+	{ src = "https://github.com/nvim-mini/mini.hipatterns" },
+	{ src = "https://github.com/nvim-mini/mini.icons" },
+	{ src = "https://github.com/nvim-mini/mini.move" },
+	{ src = "https://github.com/nvim-mini/mini.surround" },
+	{ src = "https://github.com/oskarnurm/koda.nvim" },
+	{ src = "https://github.com/marekh19/meowsoot.nvim" },
+	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/X3eRo0/dired.nvim" },
+	{ src = "https://github.com/MunifTanjim/nui.nvim" },
+})

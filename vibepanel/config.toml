@@ -1,0 +1,113 @@
+[bar]
+size = 30
+spacing = 10
+screen_margin = 0
+inset = 5
+padding = 2
+border_radius = 0
+background_opacity = 0.0
+
+[widgets]
+left   = ["workspaces"]
+center = ["clock", "media"]
+right  = [
+    "tray",
+    # { group = ["cpu", "spacer", "memory"] }, ;; incorrect spacing on "cpu" and "memory" in group
+    "cpu",
+    "memory",
+    "battery",
+    "keyboard_layout",
+    "quick_settings",
+    "notifications",
+]
+border_radius      = 20
+# background_color = "#"
+background_opacity = 1.0
+
+[widgets.battery]
+show_percentage = true
+show_icon = true
+# background_color = "#"
+
+[widgets.clock]
+format = "%A, %-d :: %H:%M"
+show_week_numbers = true
+# background_color = "#"
+
+[widgets.cpu]
+show_icon = true
+show_percentage = true
+# background_color = "#"
+
+[widgets.keyboard_layout]
+show_icon = true
+show_label = true
+format = "short"
+
+[widgets.media]
+template = "{art}{controls}"
+empty_text = ""
+max_chars = 20
+popout_opacity = 1.0
+# background_color = "#"
+
+[widgets.memory]
+show_icon = true
+format = "both"
+# background_color = "#"
+
+[widgets.notifications]
+# background_color = "#"
+
+[widgets.quick_settings]
+network = true
+bluetooth = true
+vpn = false
+audio = true
+mic = true
+brightness = true
+power = true
+idle_inhibitor = false
+updates = false
+vpn_close_on_connect = false
+audio_scroll_percentage = 2
+# background_color = "#"
+
+[widgets.spacer]
+width = 5
+
+[widgets.tray]
+max_icons = 12
+pixmap_icon_size = 18
+# background_color = "#"
+
+[widgets.workspaces]
+label_type = "numbers"
+separator = ""
+animate = false
+# background_color = "#"
+
+[theme]
+mode   = "dark"
+accent = "#ebdbb2"
+
+[theme.icons]
+theme  = "material"
+weight = 300
+
+[theme.states]
+# success = "#a9b665"
+warning = "#e78a4e"
+urgent  = "#ea6962"
+
+[theme.typography]
+font_family = "Berkeley Mono"
+
+[osd]
+enabled    = true
+position   = "bottom"
+timeout_ms = 1500
+
+[advanced]
+compositor = "mango"
+pango_font_rendering = false

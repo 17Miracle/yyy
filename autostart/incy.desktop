@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=INCY
+Comment=INCY Client
+Exec=/opt/incy/bin/incy --autostart
+Icon=incy
+Terminal=false
+Categories=Network;VPN;
+StartupWMClass=incy
+X-GNOME-Autostart-enabled=true

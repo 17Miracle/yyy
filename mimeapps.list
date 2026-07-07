@@ -1,0 +1,14 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-AyuGram Desktop-LXD3K3.desktop
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-7D8YK3.desktop
+x-scheme-handler/incy=incy.desktop
+x-scheme-handler/throne=throne-url-handler.desktop
+x-scheme-handler/discord=legcord.desktop
+x-scheme-handler/clash=clash-verge.desktop;
+x-scheme-handler/clash-verge=clash-verge.desktop;
+
+[Added Associations]
+x-scheme-handler/tg=userapp-AyuGram Desktop-LXD3K3.desktop;
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-7D8YK3.desktop;
+x-scheme-handler/clash=clash-verge.desktop;
+x-scheme-handler/clash-verge=clash-verge.desktop;

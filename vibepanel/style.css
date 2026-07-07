@@ -1,0 +1,139 @@
+:root {
+    --color-accent-primary:   #ebdbb2; /* focuscolor  */
+    --color-accent-text:      #202020; /* rootcolor */
+    --color-accent-subtle:    rgba(235, 219, 178, 0.12);
+
+    --color-state-success:    #a9b665; /* maximizescreencolor */
+    --color-state-warning:    #e78a4e; /* warning */
+    --color-state-urgent:     #ea6962; /* urgentcolor */
+
+    --color-foreground-primary:  #ebdbb2;
+    --color-foreground-muted:    #a89984;
+    --color-foreground-faint:    #7c6f64;
+    --color-foreground-disabled: #504945; /* bordercolor */
+
+    --color-border-subtle:        #32302f;
+    --color-card-overlay:         rgba(80, 73, 69, 0.35);
+    --color-card-overlay-hover:   rgba(80, 73, 69, 0.55);
+    --color-card-overlay-subtle:  rgba(80, 73, 69, 0.18);
+    --color-card-overlay-strong:  rgba(80, 73, 69, 0.75);
+
+    --color-row-background:       rgba(40, 38, 37, 0.6);
+    --color-row-background-hover: rgba(60, 56, 54, 0.7);
+
+    --color-accent-slider:  #ebdbb2;
+    --color-slider-track:   #3c3836;
+
+    --shadow-soft:   0 2px 12px rgba(0, 0, 0, 0.55);
+    --shadow-strong: 0 4px 24px rgba(0, 0, 0, 0.80);
+
+    --radius-surface: 10px;
+    --radius-pill:     6px;
+
+    --font-family: "JetBrains Nerd Font";
+}
+
+.vp-surface-popover {
+    background-color: #282625;
+    border:           1px solid #3c3836;
+    border-radius:    var(--radius-surface);
+    box-shadow:       var(--shadow-strong);
+}
+
+.workspace-indicator {
+    color:         #7c6f64;
+    border-radius: 4px;
+    min-width:     14px;
+    transition:    all 150ms ease;
+}
+.workspace-indicator.active {
+    color:     #ebdbb2;
+    min-width: 22px;
+    background-color: rgba(235, 219, 178, 0.14);
+}
+.workspace-indicator.occupied {
+    color: #a89984;
+}
+.workspace-indicator.urgent {
+    color: #ea6962;
+}
+
+.clock-label {
+    color: #ebdbb2;
+}
+
+.cpu-high .cpu-label,
+.cpu-high .cpu-icon {
+    color: #ea6962;
+}
+.memory-high .memory-label,
+.memory-high .memory-icon {
+    color: #e78a4e;
+}
+
+.battery-low .battery-icon,
+.battery-low .battery-percentage {
+    color: #ea6962;
+}
+.battery-charging .battery-icon {
+    color: #a9b665;
+}
+
+.media-label {
+    color: #d4be98;
+}
+.media-control-btn {
+    color: #a89984;
+}
+.media-control-btn:hover {
+    color: #ebdbb2;
+}
+
+.media-seek-slider trough {
+    background-color: #3c3836;
+}
+
+.notification-critical {
+    border-left: 3px solid #ea6962;
+}
+.notification-toast-critical {
+    border-left: 3px solid #ea6962;
+}
+
+scale trough {
+    background-color: #3c3836;
+    border-radius:    9999px;
+    min-height:       4px;
+    border:           none;
+    box-shadow:       none;
+}
+
+scale trough highlight {
+    background-color: #ebdbb2;
+    border-radius:    9999px;
+    border:           none;
+    box-shadow:       none;
+}
+
+scale slider {
+    min-width:        16px;
+    min-height:       16px;
+    border-radius:    9999px;
+    background-color: #ebdbb2;
+    background-image: none;
+    border:           none;
+    box-shadow:       none;
+    margin:           -6px 0;
+}
+
+scale slider:hover {
+    background-color: #f2e6c8;
+    background-image: none;
+    box-shadow:       none;
+}
+
+scale slider:active {
+    background-color: #d4be98;
+    background-image: none;
+    box-shadow:       none;
+}
