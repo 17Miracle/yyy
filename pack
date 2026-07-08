@@ -1,29 +1,24 @@
 sudo -i
 usermod -a -G wheel USERNAME
+
 nvim /etc/sudoers
 -------------------------------------------------------------------
 # %wheel ALL=(ALL:ALL) ALL
 -------------------------------------------------------------------
+
 logout
 nmtui
-mkdir -p ~/.cache/zsh ~/.config ~/.local/share ~/.local/state ~/.cache/less ~/.cache/python ~/.obsidian ~/.downloads
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
 
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo micro /etc/pacman.conf
--------------------------------------------------------------------
-Color
-ILoveCandy
-CheckSpace
-VerbosePkgLists
-ParallelDownloads = 10
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist
--------------------------------------------------------------------
+mkdir -p ~/.config/ \
+         ~/.obsidian \
+         ~/.downloads/ \
+         ~/.local/share \
+         ~/.local/state \
+         ~/.cache/bash/ \
+         ~/.cache/less/ \
+         ~/.cache/python/ \
+         ~/.pictures/Screenshots/
+
 sudo nvim /etc/bash.bashrc
 -------------------------------------------------------------------
 if [ -d /etc/bash/bashrc.d/ ]; then
@@ -36,11 +31,39 @@ fi
 if [ -s "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile" ]; then
     . "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile"
 fi
+-------------------------------------------------------------------
 
+source ~/.config/bash/.bash_profile
+rm ~/.bashrc ~/.bash_profile ~/.bash_logout
+mv ~/.bash_history $XDG_CACHE_HOME/bash/bash_history
+
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+sudo nvim /etc/pacman.conf
+-------------------------------------------------------------------
+Color
+ILoveCandy
+CheckSpace
+VerbosePkgLists
+ParallelDownloads = 10
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+-------------------------------------------------------------------
 
 sudo pacman -Syuu
-sudo pacman -S paru
-paru -S go npm rustup python reflector
+sudo pacman -S go \
+               npm \
+               paru \
+               rustup \
+               python \
+               reflector
+
 sudo reflector --age 12 \
                --verbose \
                --latest 30 \
@@ -52,23 +75,91 @@ sudo reflector --age 12 \
                --download-timeout 5 \
                --save /etc/pacman.d/mirrorlist \
                --country 'RU,KZ,BY,TR,FI,PL,DE,NL'
+
+go telemetry off
+rm -rf ~/.config/go
 rustup default stable
-paru -S noctalia-git blesh-git niri xwayland-satellite xdg-desktop-portal-gnome xdg-desktop-portal-gtk qt6-multimedia-ffmpeg gnome-keyring throne-bin vicinae-bin \
-        macos-tahoe-cursor ayugram-desktop-bin neovim brave-origin-bin obsidian neomod-bin opentabletdriver
 
-fd jq bat fzf git tar eza mpv tmux niri base btop curl wget mesa 7zip go-yq rsync unrar unzip man-db openssh kitty cosmic-files \
-parallel nwg-look downgrade man-pages linux-lts xdg-utils python-pip base-devel noto-fonts ripgrep-all libva-utils \
-imagemagick vulkan-radeon linux-firmware pacman-contrib noto-fonts-cjk wl-clipboard-rs noto-fonts-emoji \
-vulkan-icd-loader linux-lts-headers libva-mesa-driver archlinux-keyring tree-sitter-cli-github-bin
+paru -S uv \
+        fd \
+        jq \
+        bat \
+        fzf \
+        eza \
+        mpv \
+        7zip \
+        bind \
+        tree \
+        tmux \
+        niri \
+        btop \
+        gron \
+        curl \
+        wget \
+        go-yq \
+        unrar \
+        vivid \
+        sassc \
+        qview \
+        kitty \
+        rsync \
+        ffmpeg \
+        man-db \
+        neovim \
+        docker \
+        openssh \
+        nautilus \
+        nwg-look \
+        parallel \
+        tealdeer \
+        obsidian \
+        man-pages \
+        blesh-git \
+        xdg-utils \
+        downgrade \
+        net-tools \
+        base-devel \
+        throne-bin \
+        python-pip \
+        traceroute \
+        neomod-bin \ # INSTALL AFTER WITH VPN
+        fontconfig \
+        noto-fonts \
+        legcord-bin \
+        ripgrep-all \
+        libva-utils \
+        vicinae-bin \
+        imagemagick \
+        noctalia-git \
+        webkitgtk-6.0 \
+        vulkan-radeon \
+        noto-fonts-cjk \
+        linux-firmware \
+        docker-compose \
+        pacman-contrib \
+        wl-clipboard-rs \
+        opentabletdriver \
+        brave-origin-bin \
+        noto-fonts-emoji \
+        linux-lts-headers \
+        vulkan-icd-loader \
+        libva-mesa-driver \
+        xwayland-satellite \
+        woff2-font-awesome \
+        macos-tahoe-cursor \
+        ayugram-desktop-bin \
+        qt6-multimedia-ffmpeg \
+        xdg-desktop-portal-gtk \
+        ttf-nerd-fonts-symbols \
+        kitty-shell-integration \
+        xdg-desktop-portal-gnome \
+        tree-sitter-cli-github-bin # INSTALL AFTER WITH VPN
 
-
-
-
-git clone https://aur.archlinux.org/soteria-git.git
-cd soteria-git
-makepkg -rsi
-
+sudo groupadd docker
+timedatectl set-ntp true
 sudo chmod u+s /opt/Throne/Core
+sudo systemctl enable --now fstrim.timer
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo mkdir /etc/pacman.d/hooks
 sudo nvim /etc/pacman.d/hooks/paccache.hook
@@ -85,15 +176,10 @@ Description = Cleaning pacman cache...
 When = PostTransaction
 Exec = /usr/bin/paccache -rk 2
 -------------------------------------------------------------------
-sudo systemctl enable fstrim.timer
-sudo systemctl start fstrim.timer
+
 sudo nvim /etc/xdg/user-dirs.conf
 -------------------------------------------------------------------
 enabled=False
 -------------------------------------------------------------------
-sudo systemctl enable --now fstrim.timer
 
-go telemetry off
 
-sudo groupadd docker
-timedatectl set-ntp true
