@@ -8,49 +8,20 @@ alias vim="nvim"
 alias se="sudoedit"
 
 alias cp="cp -r"
-alias rm="rm -rf --"
 alias mkdir="mkdir -p"
 alias cdir='cd "${_%/*}"'
 
-alias cat="bat"
-alias img="feh"
-alias top="btop"
-alias reboot="sudo reboot"
+alias se="sudo nvim" \
+alias cat="bat" \
+alias yay="paru" \
+alias aur="paru" \
+alias ls="eza --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" \
+alias l="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --grid" \
+alias ll="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" \
+alias tree="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --tree" \
+alias wget="wget --no-hsts" \
 alias grep="grep --color=auto"
-alias shutdown="sudo shutdown -h now"
 
-alias ls='eza --icons --color=always'
-alias sl='eza --icons --color=always'
-alias ll='eza -laghm@ --all --icons --git --color=always'
-
-
-##-----------------------------------------------------------------------------
-## Functions
-
-# Usage: extract file
-extract() {
-    if [ -z "$1" ]; then
-        echo "Error: No file specified."
-        return 1
-    fi
-
-    if [ ! -f "$1" ]; then
-        echo "Error: '$1' is not a valid file!"
-        return 1
-    fi
-
-    case "$1" in
-        *.tar|*.tar.gz|*.tgz|*.tar.bz2|*.tbz2)
-            tar xvf "$1" ;;
-        *.zip|*.7z)
-            7z x "$1" ;;
-        *.rar)
-            unrar x "$1" ;;
-        *)
-            echo "Error: Cannot extract '$1'. Unsupported file format."
-            return 1 ;;
-    esac
-}
 
 ##-----------------------------------------------------------------------------
 ## The Shopt Builtin
@@ -69,8 +40,8 @@ shopt -s nocaseglob
 ##-----------------------------------------------------------------------------
 ## History
 export HISTCONTROL=ignoreboth
-export HISTSIZE=10000
-export HISTFILESIZE=20000
+export HISTSIZE=1000000
+export HISTFILESIZE=2000000
 export HISTTIMEFORMAT='%F %T '
 
 # Usage: ignores single-word commands
