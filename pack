@@ -54,12 +54,12 @@ sudo reflector --age 12 \
                --country 'RU,KZ,BY,TR,FI,PL,DE,NL'
 rustup default stable
 paru -S noctalia-git blesh-git niri xwayland-satellite xdg-desktop-portal-gnome xdg-desktop-portal-gtk qt6-multimedia-ffmpeg gnome-keyring throne-bin vicinae-bin \
-        macos-tahoe-cursor ayugram-desktop-bin neovim brave-origin-bin obsidian
+        macos-tahoe-cursor ayugram-desktop-bin neovim brave-origin-bin obsidian neomod-bin opentabletdriver
 
 fd jq bat fzf git tar eza mpv tmux niri base btop curl wget mesa 7zip go-yq rsync unrar unzip man-db openssh kitty cosmic-files \
 parallel nwg-look downgrade man-pages linux-lts xdg-utils python-pip base-devel noto-fonts ripgrep-all libva-utils \
 imagemagick vulkan-radeon linux-firmware pacman-contrib noto-fonts-cjk wl-clipboard-rs noto-fonts-emoji \
-vulkan-icd-loader linux-lts-headers libva-mesa-driver archlinux-keyring
+vulkan-icd-loader linux-lts-headers libva-mesa-driver archlinux-keyring tree-sitter-cli-github-bin
 
 
 
