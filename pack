@@ -4,7 +4,7 @@ usermod -a -G wheel USERNAME
 nvim /etc/sudoers
 -------------------------------------------------------------------
 # %wheel ALL=(ALL:ALL) ALL
--------------------------------------------------------------------
+===================================================================
 
 logout
 nmtui
@@ -31,7 +31,7 @@ fi
 if [ -s "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile" ]; then
     . "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile"
 fi
--------------------------------------------------------------------
+===================================================================
 
 source ~/.config/bash/.bash_profile
 rm ~/.bashrc ~/.bash_profile ~/.bash_logout
@@ -54,7 +54,7 @@ ParallelDownloads = 10
 Include = /etc/pacman.d/mirrorlist
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
--------------------------------------------------------------------
+===================================================================
 
 sudo pacman -Syuu
 sudo pacman -S go \
@@ -175,11 +175,11 @@ Target = *
 Description = Cleaning pacman cache...
 When = PostTransaction
 Exec = /usr/bin/paccache -rk 2
--------------------------------------------------------------------
+===================================================================
 
 sudo nvim /etc/xdg/user-dirs.conf
 -------------------------------------------------------------------
 enabled=False
--------------------------------------------------------------------
+===================================================================
 
 
