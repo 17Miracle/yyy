@@ -149,7 +149,8 @@ paru -S uv \
         tree-sitter-cli-github-bin # INSTALL AFTER WITH VPN
 
 timedatectl set-ntp true
-sudo chmod u+s /opt/Throne/Core
+sudo chown root:root /opt/Throne/ThroneCore
+sudo chmod u+s /opt/Throne/ThroneCore
 sudo usermod -a -G docker USERNAME
 sudo systemctl enable --now fstrim.timer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
