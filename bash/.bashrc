@@ -11,15 +11,15 @@ alias cp="cp -r"
 alias mkdir="mkdir -p"
 alias cdir='cd "${_%/*}"'
 
-alias se="sudo nvim" \
-alias cat="bat" \
-alias yay="paru" \
-alias aur="paru" \
-alias ls="eza --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" \
-alias l="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --grid" \
-alias ll="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" \
-alias tree="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --tree" \
-alias wget="wget --no-hsts" \
+alias se="sudo nvim" 
+alias cat="bat" 
+alias yay="paru" 
+alias aur="paru" 
+#alias ls="eza --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" 
+#alias l="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --grid" 
+#alias ll="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes" 
+#alias tree="eza --almost-all --long --group-directories-first --classify=always --color=always --color-scale=all --icons=always --no-quotes --tree" 
+alias wget="wget --no-hsts" 
 alias grep="grep --color=auto"
 
 
