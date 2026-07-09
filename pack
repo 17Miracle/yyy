@@ -155,6 +155,12 @@ sudo usermod -a -G docker USERNAME
 sudo systemctl enable --now fstrim.timer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+sudo systemctl stop bluetooth.service
+sudo systemctl disable bluetooth.service
+
+sudo systemctl stop cups.service cups.socket cups.path
+sudo systemctl disable cups.service cups.socket cups.path
+
 sudo mkdir /etc/pacman.d/hooks
 sudo nvim /etc/pacman.d/hooks/paccache.hook
 -------------------------------------------------------------------
