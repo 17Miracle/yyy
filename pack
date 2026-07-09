@@ -16,7 +16,7 @@ mkdir -p ~/.config/ \
          ~/.downloads/ \
          ~/.local/share \
          ~/.local/state \
-         ~/.cache/bash/ \
+         ~/.cache/zsh/ \
          ~/.cache/less/ \
          ~/.cache/python/ \
          ~/.pictures/Screenshots/
@@ -27,8 +27,6 @@ export ZDOTDIR="$HOME/.config/zsh"
 ===================================================================
 
 source ~/.config/zsh/.zshenv
-rm ~/.bashrc ~/.bash_profile ~/.bash_logout ~/.bash_history
-mv ~/.bash_history $XDG_CACHE_HOME/bash/bash_history
 
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
@@ -108,7 +106,6 @@ paru -S uv \
         obsidian \
         amd-ucode \
         man-pages \
-        blesh-git \
         xdg-utils \
         downgrade \
         linux-lts \
