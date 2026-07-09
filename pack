@@ -97,7 +97,6 @@ paru -S uv \
         curl \
         wget \
         go-yq \
-        unrar \
         vivid \
         sassc \
         qview \
@@ -113,10 +112,12 @@ paru -S uv \
         parallel \
         tealdeer \
         obsidian \
+        amd-ucode \
         man-pages \
         blesh-git \
         xdg-utils \
         downgrade \
+        linux-lts \
         net-tools \
         base-devel \
         throne-bin \
@@ -156,6 +157,7 @@ paru -S uv \
         tree-sitter-cli-github-bin # INSTALL AFTER WITH VPN
 
 sudo groupadd docker
+sudo usermod -a -G docker USERNAME
 timedatectl set-ntp true
 sudo chmod u+s /opt/Throne/Core
 sudo systemctl enable --now fstrim.timer
@@ -181,5 +183,3 @@ sudo nvim /etc/xdg/user-dirs.conf
 -------------------------------------------------------------------
 enabled=False
 ===================================================================
-
-
