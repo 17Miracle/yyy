@@ -1,4 +1,4 @@
-[[ $- == *i* ]] && source -- "/usr/share/blesh/ble.sh" --attach=none
+#[[ $- == *i* ]] && source -- "/usr/share/blesh/ble.sh" --attach=none
 
 ##-----------------------------------------------------------------------------
 ## Aliases
@@ -113,4 +113,4 @@ PROMPT_COMMAND=_prompt_command
 
 
 ##-----------------------------------------------------------------------------
-[[ ! ${BLE_VERSION-} ]] || ble-attach
+#[[ ! ${BLE_VERSION-} ]] || ble-attach
