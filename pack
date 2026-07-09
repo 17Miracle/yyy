@@ -9,6 +9,8 @@ nvim /etc/sudoers
 logout
 nmtui
 
+chsh -s "$(which zsh)"
+
 mkdir -p ~/.config/ \
          ~/.obsidian \
          ~/.downloads/ \
@@ -19,14 +21,13 @@ mkdir -p ~/.config/ \
          ~/.cache/python/ \
          ~/.pictures/Screenshots/
 
-sudo nvim /etc/bash.bashrc
+sudo nvim /etc/zsh/zshenv
 -------------------------------------------------------------------
-[ -d /etc/bash/bashrc.d ] && . /etc/bash/bashrc.d/*.sh
-[ -s "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile"
+export ZDOTDIR="$HOME/.config/zsh"
 ===================================================================
 
-source ~/.config/bash/.bash_profile
-rm ~/.bashrc ~/.bash_profile ~/.bash_logout
+source ~/.config/zsh/.zshenv
+rm ~/.bashrc ~/.bash_profile ~/.bash_logout ~/.bash_history
 mv ~/.bash_history $XDG_CACHE_HOME/bash/bash_history
 
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
