@@ -77,7 +77,7 @@ paru -S uv \
         fd \
         jq \
         bat \
-        oo7 \
+        keepassxc \
         fzf \
         eza \
         mpv \
@@ -154,7 +154,6 @@ sudo chown root:root /opt/Throne/ThroneCore
 sudo chmod u+s /opt/Throne/ThroneCore
 sudo usermod -a -G docker USERNAME
 sudo systemctl enable --now fstrim.timer
-systemctl --user enable --now oo7-daemon.service
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo systemctl stop bluetooth.service
