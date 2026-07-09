@@ -6,7 +6,7 @@
 export PAGER="less"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="helium-browser --ozone-platform-hint=wayland"
+export BROWSER="helium-browser --ozone-platform=wayland"
 export VIDEOPLAYER="mpv"
 export TERM="kitty"
 export TERMINAL="kitty"
