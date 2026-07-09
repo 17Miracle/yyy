@@ -156,10 +156,9 @@ paru -S uv \
         xdg-desktop-portal-gnome \
         tree-sitter-cli-github-bin # INSTALL AFTER WITH VPN
 
-sudo groupadd docker
-sudo usermod -a -G docker USERNAME
 timedatectl set-ntp true
 sudo chmod u+s /opt/Throne/Core
+sudo usermod -a -G docker USERNAME
 sudo systemctl enable --now fstrim.timer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -176,7 +175,7 @@ Target = *
 [Action]
 Description = Cleaning pacman cache...
 When = PostTransaction
-Exec = /usr/bin/paccache -rk 2
+Exec = /usr/bin/paccache --remove --keep 2
 ===================================================================
 
 sudo nvim /etc/xdg/user-dirs.conf
