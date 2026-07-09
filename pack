@@ -21,16 +21,8 @@ mkdir -p ~/.config/ \
 
 sudo nvim /etc/bash.bashrc
 -------------------------------------------------------------------
-if [ -d /etc/bash/bashrc.d/ ]; then
-    for f in /etc/bash/bashrc.d/*.sh; do
-        [ -r "$f" ] && . "$f"
-    done
-    unset f
-fi
-
-if [ -s "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile" ]; then
-    . "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile"
-fi
+[ -d /etc/bash/bashrc.d ] && . /etc/bash/bashrc.d/*.sh
+[ -s "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/bash/.bash_profile"
 ===================================================================
 
 source ~/.config/bash/.bash_profile
