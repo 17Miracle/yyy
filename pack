@@ -26,8 +26,6 @@ sudo nvim /etc/zsh/zshenv
 export ZDOTDIR="$HOME/.config/zsh"
 ===================================================================
 
-source ~/.config/zsh/.zshenv
-
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 
@@ -131,7 +129,7 @@ paru -S uv \
         pacman-contrib \
         wl-clipboard-rs \
         opentabletdriver \
-        brave-origin-bin \
+        helium-browser-bin \
         noto-fonts-emoji \
         linux-lts-headers \
         vulkan-icd-loader \
