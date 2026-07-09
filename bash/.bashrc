@@ -29,25 +29,20 @@ extract() {
         echo "Error: No file specified."
         return 1
     fi
-
     if [ ! -f "$1" ]; then
         echo "Error: '$1' is not a valid file!"
         return 1
     fi
-
     case "$1" in
         *.tar|*.tar.gz|*.tgz|*.tar.bz2|*.tbz2)
             tar xvf "$1" ;;
-        *.zip|*.7z)
+        *.zip|*.7z|*.rar)
             7z x "$1" ;;
-        *.rar)
-            unrar x "$1" ;;
         *)
             echo "Error: Cannot extract '$1'. Unsupported file format."
             return 1 ;;
     esac
 }
-
 
 ##-----------------------------------------------------------------------------
 ## The Shopt Builtin
