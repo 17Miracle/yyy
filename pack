@@ -26,6 +26,9 @@ sudo nvim /etc/zsh/zshenv
 export ZDOTDIR="$HOME/.config/zsh"
 ===================================================================
 
+git clone https://https://github.com/17Miracle/yyy.git /tmp/dotfiles
+mv /tmp/dotfiles/zsh/ ~/.config/
+
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 
