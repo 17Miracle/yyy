@@ -19,7 +19,8 @@ mkdir -p ~/.config/ \
          ~/.cache/zsh/ \
          ~/.cache/less/ \
          ~/.cache/python/ \
-         ~/.pictures/Screenshots/
+         ~/.pictures/Screenshots/ \
+         ~/.local/share/gnupg/
 
 sudo nvim /etc/zsh/zshenv
 -------------------------------------------------------------------
