@@ -119,7 +119,6 @@ paru -S uv \
         neomod-bin \ # INSTALL AFTER WITH VPN
         fontconfig \
         noto-fonts \
-        legcord-bin \ # INSTALL AFTER WITH VPN
         ripgrep-all \
         libva-utils \
         vicinae-bin \
