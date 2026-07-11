@@ -146,7 +146,9 @@ paru -S uv \
         ttf-nerd-fonts-symbols \
         kitty-shell-integration \
         xdg-desktop-portal-gnome \
-        tree-sitter-cli-github-bin # INSTALL AFTER WITH VPN
+        tree-sitter-cli-github-bin \ # INSTALL AFTER WITH VPN
+        stylua \ # FOR NEOVIM
+        lua-language-server # FOR NEOVIM
 
 timedatectl set-ntp true
 sudo chown root:root /opt/Throne/ThroneCore
@@ -180,4 +182,9 @@ Exec = /usr/bin/paccache --remove --keep 2
 sudo nvim /etc/xdg/user-dirs.conf
 -------------------------------------------------------------------
 enabled=False
+===================================================================
+
+In Neovim:
+-------------------------------------------------------------------
+:lua require('blink.cmp').build():pwait()
 ===================================================================
