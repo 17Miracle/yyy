@@ -188,3 +188,7 @@ In Neovim:
 -------------------------------------------------------------------
 :lua require('blink.cmp').build():pwait()
 ===================================================================
+
+For Niri:
+dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
+
