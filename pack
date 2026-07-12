@@ -147,6 +147,7 @@ paru -S uv \
         kitty-shell-integration \
         xdg-desktop-portal-gnome \
         tree-sitter-cli-github-bin \ # INSTALL AFTER WITH VPN
+        zsh-fast-syntax-highlighting \
         stylua \ # FOR NEOVIM
         lua-language-server # FOR NEOVIM
 
