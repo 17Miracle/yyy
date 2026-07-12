@@ -192,3 +192,5 @@ In Neovim:
 For Niri:
 dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
 
+For Helium:
+helium://flags/#close-window-with-last-tab = Never
