@@ -149,7 +149,8 @@ paru -S uv \
         tree-sitter-cli-github-bin \ # INSTALL AFTER WITH VPN
         zsh-fast-syntax-highlighting \
         stylua \ # FOR NEOVIM
-        lua-language-server # FOR NEOVIM
+        lua-language-server \ # FOR NEOVIM
+        fzf-tab-git
 
 timedatectl set-ntp true
 sudo chown root:root /opt/Throne/ThroneCore
