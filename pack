@@ -196,3 +196,6 @@ dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
 
 For Helium:
 helium://flags/#close-window-with-last-tab = Never
+
+         Edit default path for downloads:
+                  jq '.download.default_directory = "/home/miracle/.downloads" | .savefile.default_directory = "/home/miracle/.downloads"' Preferences > tmp.json && mv tmp.json Preferences
