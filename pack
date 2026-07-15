@@ -199,3 +199,32 @@ helium://flags/#close-window-with-last-tab = Never
 
          Edit default path for downloads:
                   jq '.download.default_directory = "/home/miracle/.downloads" | .savefile.default_directory = "/home/miracle/.downloads"' Preferences > tmp.json && mv tmp.json Preferences
+
+Make Kitty use single-instance mode:
+mkdir -p ~/.config/systemd/user/
+nvim ~/.config/systemd/user/kitty.service
+-------------------------------------------------------------------
+[Unit]
+Description=Kitty Terminal Single Instance Daemon
+Documentation=man:kitty(1)
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/kitty --single-instance --detach
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
+===================================================================
+systemctl --user daemon-reload
+systemctl --user enable kitty.service
+systemctl --user start kitty.service
+mkdir -p ~/.local/share/applications/
+cp /usr/share/applications/kitty.desktop ~/.local/share/applications/
+
+nvim ~/.local/share/applications/kitty.desktop:
+-------------------------------------------------------------------
+Exec=kitty --single-instance
+===================================================================
