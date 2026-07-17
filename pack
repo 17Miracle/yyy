@@ -140,7 +140,7 @@ paru -S uv \
         xwayland-satellite \
         woff2-font-awesome \
         macos-tahoe-cursor \
-        ayugram-desktop-bin \
+        chaotic-aur/ayugram-desktop-git \
         qt6-multimedia-ffmpeg \
         xdg-desktop-portal-gtk \
         ttf-nerd-fonts-symbols \
