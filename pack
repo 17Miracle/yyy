@@ -228,3 +228,5 @@ nvim ~/.local/share/applications/kitty.desktop:
 -------------------------------------------------------------------
 Exec=kitty --single-instance
 ===================================================================
+
+bat cache --build
