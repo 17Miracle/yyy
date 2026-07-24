@@ -123,7 +123,6 @@ paru -S uv \
         libva-utils \
         vicinae-bin \
         imagemagick \
-        noctalia-git \
         webkitgtk-6.0 \
         vulkan-radeon \
         noto-fonts-cjk \
@@ -142,6 +141,7 @@ paru -S uv \
         macos-tahoe-cursor \
         chaotic-aur/ayugram-desktop-git \
         qt6-multimedia-ffmpeg \
+        qt6-imageformats \
         xdg-desktop-portal-gtk \
         ttf-nerd-fonts-symbols \
         kitty-shell-integration \
@@ -150,7 +150,8 @@ paru -S uv \
         zsh-fast-syntax-highlighting \
         stylua \ # FOR NEOVIM
         lua-language-server \ # FOR NEOVIM
-        fzf-tab-git
+        fzf-tab-git \
+        river-classic
 
 timedatectl set-ntp true
 sudo chown root:root /opt/Throne/ThroneCore
