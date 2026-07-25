@@ -85,7 +85,6 @@ paru -S uv \
         bind \
         tree \
         tmux \
-        niri \
         btop \
         gron \
         curl \
