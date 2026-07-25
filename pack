@@ -90,6 +90,7 @@ paru -S uv \
         gron \
         curl \
         wget \
+        pnpm \
         go-yq \
         vivid \
         sassc \
