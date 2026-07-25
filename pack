@@ -136,22 +136,24 @@ paru -S uv \
         linux-lts-headers \
         vulkan-icd-loader \
         libva-mesa-driver \
-        xwayland-satellite \
         woff2-font-awesome \
         macos-tahoe-cursor \
         chaotic-aur/ayugram-desktop-git \
         qt6-multimedia-ffmpeg \
         qt6-imageformats \
-        xdg-desktop-portal-gtk \
+        xdg-desktop-portal-wlr \
+        xdg-desktop-portal \
         ttf-nerd-fonts-symbols \
         kitty-shell-integration \
-        xdg-desktop-portal-gnome \
         tree-sitter-cli-github-bin \ # INSTALL AFTER WITH VPN
         zsh-fast-syntax-highlighting \
         stylua \ # FOR NEOVIM
         lua-language-server \ # FOR NEOVIM
         fzf-tab-git \
-        river-classic
+        river-classic \
+        wideriver \
+        waybar \
+        swaybg
 
 timedatectl set-ntp true
 sudo chown root:root /opt/Throne/ThroneCore
