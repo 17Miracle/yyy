@@ -152,7 +152,6 @@ paru -S uv \
         lua-language-server \ # FOR NEOVIM
         fzf-tab-git \
         river-classic \
-        wideriver \
         waybar \
         swaybg
 
