@@ -104,6 +104,7 @@ paru -S uv \
         nautilus \
         nwg-look \
         parallel \
+        brightnessctl \
         tealdeer \
         obsidian \
         amd-ucode \
