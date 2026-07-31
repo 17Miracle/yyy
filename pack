@@ -203,6 +203,15 @@ helium://flags/#close-window-with-last-tab = Never
          Edit default path for downloads:
                   jq '.download.default_directory = "/home/miracle/.downloads" | .savefile.default_directory = "/home/miracle/.downloads"' Preferences > tmp.json && mv tmp.json Preferences
 
+
+
+
+https://github.com/Fausto-Korpsvart/Vague-GTK-Theme.git
+./Vague-GTK-Theme/themes/install.sh -d $XDG_DATA_HOME/themes -l -a blue -m dark
+
+
+
+
 Make Kitty use single-instance mode:
 mkdir -p ~/.config/systemd/user/
 nvim ~/.config/systemd/user/kitty.service
