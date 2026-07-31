@@ -206,7 +206,7 @@ helium://flags/#close-window-with-last-tab = Never
 
 
 
-https://github.com/Fausto-Korpsvart/Vague-GTK-Theme.git
+git clone https://github.com/Fausto-Korpsvart/Vague-GTK-Theme.git
 ./Vague-GTK-Theme/themes/install.sh -d $XDG_DATA_HOME/themes -l -a blue -m dark
 
 
