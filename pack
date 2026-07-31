@@ -208,6 +208,9 @@ helium://flags/#close-window-with-last-tab = Never
 
 git clone https://github.com/Fausto-Korpsvart/Vague-GTK-Theme.git
 ./Vague-GTK-Theme/themes/install.sh -d $XDG_DATA_HOME/themes -l -a blue -m dark
+tar -xf ~/Vague-GTK-Theme/icons/Vague-Icons.tar.xz
+mkdir $XDG_DATA_HOME/icons
+mv Colloid-Vague $XDG_DATA_HOME/icons
 
 
 
