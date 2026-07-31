@@ -212,8 +212,11 @@ tar -xf ~/Vague-GTK-Theme/icons/Vague-Icons.tar.xz
 mkdir $XDG_DATA_HOME/icons
 mv Colloid-Vague $XDG_DATA_HOME/icons
 
-
-
+sudo nvim /etc/locale.gen
+-------------------------------------------------------------------
+ru_RU.UTF-8 UTF-8
+===================================================================
+sudo locale-gen
 
 Make Kitty use single-instance mode:
 mkdir -p ~/.config/systemd/user/
