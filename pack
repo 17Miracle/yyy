@@ -154,7 +154,8 @@ paru -S uv \
         swayfx \
         waybar \
         swaybg \
-         sway-screenshot
+         sway-screenshot \
+         anki
 
 timedatectl set-ntp true
 sudo chown root:root /opt/Throne/ThroneCore
