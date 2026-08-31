@@ -143,7 +143,7 @@ paru -S uv \
         qt6-multimedia-ffmpeg \
         qt6-imageformats \
         xdg-desktop-portal-wlr \
-        xdg-desktop-portal \
+        xdg-desktop-portal-gtk \
         ttf-nerd-fonts-symbols \
         kitty-shell-integration \
         tree-sitter-cli-github-bin \ # INSTALL AFTER WITH VPN
@@ -152,6 +152,7 @@ paru -S uv \
         lua-language-server \ # FOR NEOVIM
         fzf-tab-git \
         swayfx \
+         swaync \
         waybar \
         swaybg \
          sway-screenshot \
